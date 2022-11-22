@@ -1,9 +1,9 @@
 <?php
-CONST testConstanta = "asd";
+const TESTCONSTANTA = "asd";
 $user_name = "Igor";
 
-function show_something() {
-	RETURN 'SOMETHING';	
-}
+include "function.php";
 
-if (1==1) echo 'hi';
+if (1==1) {
+    echo 'hi';
+}
