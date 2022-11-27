@@ -1,5 +1,5 @@
 <?php
-echo "<table>";
+echo "<table border='1'>";
 for ($cols = 1; $cols <= 10; $cols++) {
     echo "<tr>";
     for ($rows = 1; $rows <= 10; $rows++) {
