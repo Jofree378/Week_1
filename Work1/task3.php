@@ -1,11 +1,11 @@
 <?php
-$age = 78;
+$age = rand(0, 68);
 
-if (($age>=18) and ($age <=65)) {
+if ($age >= 18 && $age <= 65) {
     echo "Вам еще работать и работать";
-} elseif ($age>65) {
+} elseif ($age > 65) {
     echo "Вам пора на пенсию";
-} elseif (($age>=1) and ($age<=17)) {
+} elseif (($age >= 1) && ($age <= 17)) {
     echo "Вам еще рано работать";
 } else {
     echo "Неизвестный возраст";

@@ -20,10 +20,10 @@ $opel = [
 ];
 
 # Объединение массивов
-$CAR = [ 'bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel];
+$car = ['bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel];
 
 # Проходим по многомерному массиву последовательно
-foreach ($CAR as $mark => $value) {
+foreach ($car as $mark => $value) {
     echo "CAR $mark<br>";
     echo $mark;
     foreach ($value as $cell => $parameter) {
