@@ -5,12 +5,12 @@
 ### Основной файл PSR-2.php:
 ```
 <?php
-const TESTCONSTANTA = "asd";
-$user_name = "Igor";
+const TEST_CONSTANTA = "asd";
+$userName = "Igor";
 
 include "function.php";
 
-if (1==1) {
+if (1 == 1) {
     echo 'hi';
 }
 ```
@@ -18,7 +18,7 @@ if (1==1) {
 ### Файл с функцией function.php:
 ```
 <?php
-function show_something()
+function showSomething()
 {
     return 'SOMETHING';
 }
@@ -59,13 +59,13 @@ echo "Количество рисунков выполненных краска�
 ### task3
 ```
 <?php
-$age = 78;
+$age = rand(0, 68);
 
-if (($age>=18) and ($age <=65)) {
+if ($age >= 18 && $age <= 65) {
     echo "Вам еще работать и работать";
-} elseif ($age>65) {
+} elseif ($age > 65) {
     echo "Вам пора на пенсию";
-} elseif (($age>=1) and ($age<=17)) {
+} elseif (($age >= 1) && ($age <= 17)) {
     echo "Вам еще рано работать";
 } else {
     echo "Неизвестный возраст";
@@ -75,18 +75,18 @@ if (($age>=18) and ($age <=65)) {
 ### task4
 ```
 <?php
-$day = 4;
+$day = rand(0, 8);
 
 switch ($day) {
-    case (1):
-    case (2):
-    case (3):
-    case (4):
-    case (5):
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
         echo "Это рабочий день<br>";
         break;
-    case (6):
-    case (7):
+    case 6:
+    case 7:
         echo "Это выходной день<br>";
         break;
     default:
@@ -118,10 +118,10 @@ $opel = [
 ];
 
 # Объединение массивов
-$CAR = [ 'bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel];
+$car = ['bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel];
 
 # Проходим по многомерному массиву последовательно
-foreach ($CAR as $mark => $value) {
+foreach ($car as $mark => $value) {
     echo "CAR $mark<br>";
     echo $mark;
     foreach ($value as $cell => $parameter) {
@@ -134,31 +134,22 @@ foreach ($CAR as $mark => $value) {
 ### task6
 ```
 <?php
-echo "<table>";
+echo "<table border='1'>";
 for ($cols = 1; $cols <= 10; $cols++) {
     echo "<tr>";
     for ($rows = 1; $rows <= 10; $rows++) {
-        if (($rows == 1) || ($cols == 1)) {
-            if (($rows % 2 == 0) && ($cols % 2 == 0)) {
-                echo "<th>" . "(" . $rows * $cols . ")" . "</th>";
-            } elseif (($rows % 2 != 0) && ($cols % 2 != 0)) {
-                echo "<th>" . "[" . $rows * $cols . "]" . "</th>";
-            } else {
-                echo "<th>" . $rows * $cols . "</th>";
-            }
+        if (($rows % 2 == 0) && ($cols % 2 == 0)) {
+            echo "<td>" . "(" . $rows * $cols . ")" . "</td>";
+        } elseif (($rows % 2 != 0) && ($cols % 2 != 0)) {
+            echo "<td>" . "[" . $rows * $cols . "]" . "</td>";
         } else {
-            if (($rows % 2 == 0) && ($cols % 2 == 0)) {
-                echo "<td> " . "(" . $rows * $cols . ")" . "</td>";
-            } elseif (($rows % 2 != 0) && ($cols % 2 != 0)) {
-                echo "<td>" . "[" . $rows * $cols . "]" . "</td>";
-            } else {
-                echo "<td>" .$rows * $cols . "</td>";
-            }
+            echo "<td>" . $rows * $cols . "</td>";
         }
     }
     echo "</tr>";
 }
 echo "</table>";
+
 ```
 
 
